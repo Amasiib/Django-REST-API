@@ -1,0 +1,10 @@
+{% extends 'bloghtml/master.html' %}
+
+{% block content %}
+<h2>All Comments</h2>
+<ul>
+    {% for comment in comments %}
+        <li>Post ID: {{ comment.post.id }} | User: {{ comment.user.username }}<br>{{ comment.content }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
